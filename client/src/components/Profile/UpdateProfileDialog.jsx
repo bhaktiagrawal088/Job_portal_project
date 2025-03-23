@@ -8,6 +8,7 @@ import { setUser } from '@/redux/authSlice'
 import { toast } from 'sonner'
 import { USER_API_END_POINT } from '@/utils/constant'
 import { useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 
 function UpdateProfileDialog({open, setOpen}) {
