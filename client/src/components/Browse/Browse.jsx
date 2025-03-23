@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import Navbar from '../shared/Navbar'
-import Jobs from '../Jobs/Jobs';
 import Singlejob from '../Jobs/Singlejob';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchQuery } from '@/redux/jobSlice';
