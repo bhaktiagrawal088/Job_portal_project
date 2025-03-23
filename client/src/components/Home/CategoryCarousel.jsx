@@ -29,7 +29,7 @@ function CategoryCarousel() {
             <CarouselContent className="flex space-x-1">
                {
                 category.map((cat, index) => (
-                    <CarouselItem className= "md:basis-1/3 lg-basis-1/5 flex-shrink-0">
+                    <CarouselItem  key={index} className= "md:basis-1/3 lg-basis-1/5 flex-shrink-0">
                         <Button onClick = {() => searchJobHandler(cat)}
                         variant="outline" className="rounded-xl">{cat}</Button>
                     </CarouselItem>

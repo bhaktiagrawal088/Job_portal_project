@@ -2,6 +2,7 @@
 
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ProtectRoute = ({ children }) => {
     const { user } = useSelector((store) => store.auth);
@@ -15,6 +16,10 @@ const ProtectRoute = ({ children }) => {
     }
 
     return <>{children}</>;
+};
+
+ProtectRoute.propTypes = {
+    children: PropTypes.node.isRequired, // Ensures `children` is a valid React node and required
 };
 
 export default ProtectRoute;

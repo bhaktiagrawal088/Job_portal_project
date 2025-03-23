@@ -50,7 +50,7 @@ const CompaniesTable = () => {
           ) : 
               (
                 filterCompany?.map((company) => (
-                <tr>
+                <tr  key={company._id}>
                     <TableCell>
                       <Avatar>
                         <AvatarImage

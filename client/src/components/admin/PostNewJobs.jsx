@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Navbar from '../shared/Navbar'
 import { Label } from '@radix-ui/react-label'
 import { Input } from '../ui/input'
@@ -59,7 +59,7 @@ const PostNewJobs = () => {
                 navigate('/admin/jobs')
             }
         } catch (error) {
-            // console.log(error);
+             console.log(error);
             toast.error('Failed to post job') 
         }
         finally{

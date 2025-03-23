@@ -1,10 +1,11 @@
-import React from 'react'
 import { Button } from '../ui/button'
 import { BookMarked } from 'lucide-react'
 import { Avatar } from '@radix-ui/react-avatar'
 import { AvatarImage } from '../ui/avatar'
 import { Badge } from '../ui/badge'
 import { useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types';
+
 
 function Singlejob({job}) {
 
@@ -54,5 +55,22 @@ function Singlejob({job}) {
     </div>
   )
 }
+
+Singlejob.propTypes = {
+    job: PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      position: PropTypes.string.isRequired,
+      jobType: PropTypes.string.isRequired,
+      salary: PropTypes.string.isRequired,
+      createdAt: PropTypes.string.isRequired,
+      company: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        logo: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  };
+  
 
 export default Singlejob
