@@ -27,6 +27,7 @@
     "cros": "^1.0.1",
     "datauri": "^4.1.0",
     "embla-carousel-react": "^8.3.0",
+    "framer-motion": "^12.5.0",
     "lucide-react": "^0.446.0",
     "next-themes": "^0.3.0",
     "react": "^19.0.0",
