@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../shared/Navbar'
 import FilterCard from './FilterCard'
 import Singlejob from './Singlejob';
@@ -10,17 +10,19 @@ import {motion}  from 'framer-motion'
 
 function Jobs() {
 
-    const {allJobs , searchQuery} = useSelector(store => store.job);
+
+    const { allJobs = [], searchQuery = "" } = useSelector(store => store.job);
+
 
     const [filterJobs, setFilterJobs] = useState(allJobs)
     useEffect(() => {
         if(searchQuery){
             const filteredJobs = allJobs.filter(job => 
-                job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                job.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                job.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                job.salary.toLowerCase().includes(searchQuery.toLowerCase())||
-                job.jobType.toLowerCase().includes(searchQuery.toLowerCase())
+                job.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                job.location?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                job.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                job.salary?.toLowerCase().includes(searchQuery.toLowerCase())||
+                job.jobType?.toLowerCase().includes(searchQuery.toLowerCase())
             );
             setFilterJobs(filteredJobs)
         }

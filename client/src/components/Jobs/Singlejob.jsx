@@ -70,6 +70,7 @@ Singlejob.propTypes = {
         logo: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
+    requirements: PropTypes.string, // Make optional if needed
   };
   
 
